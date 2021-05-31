@@ -1,0 +1,28 @@
+{
+  "name": "cache-dir-find",
+  "version": "0.1.0",
+  "description": "auto import module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node test/index.js",
+    "test": "echo \\\"Error: no dist specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maweimaweima/cache-dir-find.git"
+  },
+  "keywords": [
+    "auto",
+    "import",
+    "module"
+  ],
+  "author": "deepFish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maweimaweima/cache-dir-find/issues"
+  },
+  "homepage": "https://github.com/maweimaweima/cache-dir-find#readme",
+  "dependencies": {
+    "chokidar": "^3.5.1"
+  }
+}
