@@ -12,7 +12,7 @@ Install with npm:
 ### Uses
 
 ```
-// instance 
+// Get new instance cache
 const cacheDirFind = require("cache-dir-find");
 const cacheDir = cacheDirFind();
 cacheDir.add(...);
@@ -21,6 +21,7 @@ cacheDir.getChildren(...);
 ```
 
 ```
+// Get this single instance cache
 const {add, remove, getChildren} = require("cache-dir-find");
 ```
 
