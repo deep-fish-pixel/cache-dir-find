@@ -18,10 +18,12 @@ const cacheDir = cacheDirFind();
 cacheDir.add(...);
 cacheDir.remove(...);
 cacheDir.getChildren(...);
+cacheDir.getParent(...);
+cacheDir.exist(...);
 ```
 
 ```
 // Get this single instance cache
-const {add, remove, getChildren} = require("cache-dir-find");
+const { add, remove, getChildren, getParent, exist } = require("cache-dir-find");
 ```
 

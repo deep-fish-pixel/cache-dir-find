@@ -37,6 +37,21 @@ function createDirectoryCache() {
       return executeByCondition(exclude, () => {
         return children.filter(file => !exclude.some(flag => file.indexOf(flag) >= 0))
       }, children);
+    },
+    /**
+     * 查找父目录
+     * @param dir
+     */
+    getParent(dir){
+      const parentDir = getParent(dir);
+      return directories.get(parentDir) ? parentDir : null;
+    },
+    /**
+     * 查找父目录
+     * @param dir
+     */
+    exist(dir){
+      return directories.has(dir);
     }
   }
 }
