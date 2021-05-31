@@ -1,6 +1,6 @@
 {
   "name": "cache-dir-find",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "auto import module",
   "main": "src/index.js",
   "scripts": {
