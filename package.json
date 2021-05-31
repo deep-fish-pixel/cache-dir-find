@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/maweimaweima/cache-dir-find/issues"
   },
-  "homepage": "https://github.com/maweimaweima/cache-dir-find#readme",
-  "dependencies": {
-    "chokidar": "^3.5.1"
-  }
+  "homepage": "https://github.com/maweimaweima/cache-dir-find#readme"
 }
