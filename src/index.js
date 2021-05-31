@@ -12,9 +12,15 @@ function createDirectoryCache() {
      */
     add(path) {
       const parentDir = getParent(path);
-      const children = this.getChildren(parentDir);
-      children.push(path);
-      directories.set(parentDir, children.sort());
+      const parentChildren = this.getChildren(parentDir);
+      parentChildren.push(path);
+      directories.set(parentDir, parentChildren.sort());
+
+      // 缓存该目录
+      const children = directories.get(path);
+      if (!children) {
+        directories.set(path, []);
+      }
     },
     /**
      * 移除路径
