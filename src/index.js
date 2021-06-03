@@ -1,9 +1,10 @@
-const { getParent } = require('./file');
+const { getParent, getSubDirectories } = require('./file');
 const executeByCondition = require('./executeByCondition');
 
 
 function createDirectoryCache() {
   const directories = new Map();
+  let isFirstAdd = true;
 
   return {
     /**
@@ -12,10 +13,17 @@ function createDirectoryCache() {
      */
     add(path) {
       const parentDir = getParent(path);
+      // 第一次获取所有子目录文件
+      if (isFirstAdd) {
+        getSubDirectories(parentDir, directories);
+        isFirstAdd = false;
+      }
       const parentChildren = this.getChildren(parentDir);
-      parentChildren.push(path);
-      directories.set(parentDir, parentChildren.sort());
-
+      const exist = parentChildren.some((child => child === path));
+      if (!exist) {
+        parentChildren.push(path);
+        directories.set(parentDir, parentChildren.sort());
+      }
       // 缓存该目录
       const children = directories.get(path);
       if (!children) {
